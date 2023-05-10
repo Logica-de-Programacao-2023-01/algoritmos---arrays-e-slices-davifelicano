@@ -5,7 +5,11 @@ package main
 import "fmt"
 
 func main() {
-	Array := [4]float64{2, 3, 4, 5}
-	a := Array[0] * Array[1] * Array[2] * Array[3]
-	fmt.Print("Multiplicação entre os Array ", a)
+	var a float64
+	Array := [4]float64{1.5, 1.6, 1.9, 2.5}
+	a = 1
+	for i := 0; i < len(Array); i++ {
+		a *= Array[i]
+	}
+	fmt.Printf("%.2f", a)
 }
